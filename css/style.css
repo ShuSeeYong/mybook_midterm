@@ -1,0 +1,397 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Georgia, serif;
+    margin: 0;
+    font-size:16px;
+    overflow: auto;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 25px;
+    text-align: center;
+    background: rgb(146, 224, 255);
+    color:black;  
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    position: center;
+    top: 18px;
+    left: 10px;
+    font-size: 30px;
+}
+
+.header p {
+    position: center;
+    top: 18px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+    max-width: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-top:-15px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+.navbar a.left {
+    float: left;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    right: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #4e4d4d;
+}
+
+.my-float {
+    margin-top: 18px;
+    font-size:150%;
+}
+
+.float .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #4e4d4d;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .float .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  .float:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.container {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-color: black;
+    border:2px solid #298697;
+}
+
+.col-25 {
+    float: left;
+    width: 100%;
+    margin-top:-5px;
+}
+
+.col-75 {
+    float: left;
+    width: 95%;
+    margin-top: -5px;
+    margin-left:10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text],input[type=file],input[type=number],input[type=tel],select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: dodgerblue;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+    cursor: pointer;
+    float: right;
+    width: 100%;
+    margin-top:10px;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: darkturquoise;
+    font-weight: bold;
+}
+
+.icon {
+    color: black;
+    min-width: 10%;
+    text-align: center;
+    margin-top: 6px;
+    padding: 12px 5px;
+    /* margin: 8px 0; */
+  }
+
+  .input-icons i {
+    position: absolute;
+    right:10px;
+    top:3px;
+    cursor: pointer;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+    position:relative;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color:rgb(146, 224, 255);
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    bottom: -10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: calibri;
+    border: 3px solid black;
+    color: darkslateblue;
+    padding-bottom: 10px;
+    background-color: rgb(220, 243, 252);
+    font-weight: bold;
+}
+
+.card:hover {
+    box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.column-card {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding-bottom: 10px;
+    column-count: 2;
+}
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .main {
+        padding: 1px;
+    }
+
+    .row {
+            grid-template-columns: repeat(2,1fr);  
+    }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: calibri;
+    border: 3px solid black;
+    color: darkslateblue;
+    padding-bottom: 10px;
+    background-color: rgb(220, 243, 252);
+    font-weight: bold;
+}
+
+.card:hover {
+    box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.column-card {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding-bottom: 10px;
+    column-count: 2;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+}
+
+/* Responsive layout - when the screen is more than 1000px wide */
+@media screen and (min-width: 1000px) {
+    .container {
+        width: 50%;
+        margin: auto;
+    }
+
+    .main {
+        padding: 100px;
+    }
+
+    .row {  
+        grid-template-columns: repeat(4,1fr);  
+    }
+
+/* Main column */
+.main {
+    -ms-flex: 100%;
+    /* IE10 */
+    flex: 100%;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 100px;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size:cover;
+    /* position: fixed; */
+}
+
+.main1 {
+    -ms-flex: 100%;
+    /* IE10 */
+    flex: 100%;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 100px;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/50.jpg");
+    background-position: center;
+    background-size:cover;
+    /* position: absolute; */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: calibri;
+    border: 3px solid black;
+    color: darkslateblue;
+    padding-bottom: 10px;
+    background-color: rgb(220, 243, 252);
+    font-weight: bold;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.column-card {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding-bottom: 10px;
+    column-count: 2;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color:rgb(146, 224, 255);
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    bottom: -10px;
+    width: 100%;
+    overflow: hidden;
+}
+}
